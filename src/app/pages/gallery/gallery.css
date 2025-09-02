@@ -1,0 +1,49 @@
+.gallery {
+    padding: 28px 0;
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .04);
+}
+
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.ba-slider img,
+.ba-slider video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.ba-before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    overflow: hidden;
+    transition: width .08s linear;
+}
+
+.ba-after {
+    position: relative;
+}
+
+.ba-slider input[type="range"] {
+    width: 100%;
+    margin-top: 8px;
+}

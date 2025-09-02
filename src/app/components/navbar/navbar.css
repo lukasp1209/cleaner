@@ -1,0 +1,41 @@
+/* Custom navbar styles - Bootstrap handles most styling */
+
+/* Custom active link styling */
+.nav-link.active {
+  position: relative;
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
+}
+
+/* Brand logo hover effect */
+.navbar-brand:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Mobile menu animation */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Custom button styling in navbar */
+.nav-link.btn {
+  transition: all 0.3s ease;
+}
+
+.nav-link.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}

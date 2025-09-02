@@ -1,0 +1,46 @@
+.contact {
+    padding: 28px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 720px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.actions {
+    margin-top: 12px;
+}
+
+button {
+    background: #0b74d1;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.error {
+    color: #c53030;
+    font-size: .9rem;
+}
+
+.success {
+    color: #2f855a;
+    font-weight: 600;
+}

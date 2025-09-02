@@ -1,0 +1,39 @@
+/* Custom styles for impressum page */
+
+/* Typography improvements */
+.card-body h3, .card-body h4, .card-body h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-body h3:first-child {
+  margin-top: 0;
+}
+
+/* Link styling */
+.card-body a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.card-body a:hover {
+  color: #1d4ed8;
+}
+
+/* Alert box styling */
+.alert-info {
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Legal text readability */
+.text-muted {
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 2rem 1.5rem;
+  }
+}

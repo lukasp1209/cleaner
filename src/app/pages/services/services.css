@@ -1,0 +1,18 @@
+.services {
+    padding: 28px 0;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.service-list li {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .04);
+}

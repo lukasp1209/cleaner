@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Custom global styles for the cleaning company */
+:root {
+  --primary-color: #6b7280;
+  --primary-hover: #4b5563;
+  --secondary-color: #f8fafc;
+  --accent-color: #10b981;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --light-gray: #e5e7eb;
+  --medium-gray: #9ca3af;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  color: white;
+  padding: 120px 0;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Override Bootstrap primary color with gray */
+:root {
+  --bs-primary: #6b7280;
+  --bs-primary-rgb: 107, 114, 128;
+  --bs-primary-text-emphasis: #374151;
+  --bs-primary-bg-subtle: #f3f4f6;
+  --bs-primary-border-subtle: #d1d5db;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Ensure icons are visible with proper contrast */
+.bi.text-primary {
+  color: var(--primary-color) !important;
+  opacity: 1;
+}
+
+.bg-primary.bg-opacity-10 {
+  background-color: rgba(107, 114, 128, 0.1) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Bootstrap Icons styling */
+.bi {
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: -0.125em;
+}
+
+/* Icon containers */
+.rounded-circle .bi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure proper contrast for icons */
+.text-primary.bi,
+.bi.text-primary {
+  color: #374151 !important;
+  font-weight: normal;
+}
+
+/* Icon background circles */
+.bg-primary.bg-opacity-10 .bi {
+  color: #374151 !important;
+}

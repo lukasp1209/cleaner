@@ -1,0 +1,185 @@
+<app-navbar></app-navbar>
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-3">Galerie — Vorher / Nachher</h1>
+        <p class="lead">
+          Sehen Sie die beeindruckenden Ergebnisse unserer professionellen Reinigungsarbeiten
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Interactive Before/After Slider -->
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-lg">
+          <div class="card-header bg-primary text-white">
+            <h4 class="card-title mb-0">
+              <i class="bi bi-sliders me-2"></i>Terrasse - Musterobjekt
+            </h4>
+          </div>
+          <div class="card-body p-0">
+            <div class="position-relative" style="height: 400px; overflow: hidden">
+              <div class="position-absolute w-100 h-100">
+                <img
+                  src="assets/after1.jpg"
+                  alt="Nachher"
+                  class="w-100 h-100"
+                  style="object-fit: cover"
+                />
+              </div>
+              <div class="position-absolute h-100 overflow-hidden" [style.width.%]="sliderValue">
+                <img
+                  src="assets/before1.jpg"
+                  alt="Vorher"
+                  class="h-100"
+                  style="object-fit: cover; width: 800px"
+                />
+              </div>
+              <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75">
+                <div class="d-flex align-items-center justify-content-between text-white">
+                  <small><i class="bi bi-arrow-left"></i> Vorher</small>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    [(ngModel)]="sliderValue"
+                    class="form-range flex-grow-1 mx-3"
+                  />
+                  <small>Nachher <i class="bi bi-arrow-right"></i></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <i class="bi bi-award text-primary fs-1 mb-3"></i>
+            <h5 class="fw-bold mb-3">Qualitätsgarantie</h5>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <h4 class="text-primary fw-bold">500+</h4>
+                  <small class="text-muted">Projekte</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <h4 class="text-primary fw-bold">100%</h4>
+                  <small class="text-muted">Zufriedenheit</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <h4 class="text-primary fw-bold">5★</h4>
+                  <small class="text-muted">Bewertung</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="border rounded p-3">
+                  <h4 class="text-primary fw-bold">24h</h4>
+                  <small class="text-muted">Service</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4 mt-5">
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm card-hover">
+          <img
+            src="assets/after2.jpg"
+            alt="Fassade - Stadtvilla"
+            class="card-img-top"
+            style="height: 250px; object-fit: cover"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Fassade - Stadtvilla</h5>
+            <p class="card-text text-muted small">
+              Komplette Fassadenerneuerung durch professionelle Reinigung
+            </p>
+            <span class="badge bg-success">
+              <i class="bi bi-check-circle me-1"></i>Abgeschlossen
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm card-hover">
+          <div class="position-relative">
+            <video
+              controls
+              src="assets/videos/pv-clean.mp4"
+              class="card-img-top"
+              style="height: 250px; object-fit: cover"
+            ></video>
+            <div class="position-absolute top-0 start-0 m-3">
+              <span class="badge bg-primary"> <i class="bi bi-play-circle me-1"></i>Video </span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">PV-Anlagen Reinigung</h5>
+            <p class="card-text text-muted small">
+              Professionelle Reinigung für maximale Energieeffizienz
+            </p>
+            <span class="badge bg-warning text-dark">
+              <i class="bi bi-lightning me-1"></i>+20% Leistung
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm card-hover">
+          <img
+            src="assets/before2.jpg"
+            alt="Dachrinnen Reinigung"
+            class="card-img-top"
+            style="height: 250px; object-fit: cover"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Dachrinnen Reinigung</h5>
+            <p class="card-text text-muted small">
+              Gründliche Entfernung von Laub und Ablagerungen
+            </p>
+            <span class="badge bg-info">
+              <i class="bi bi-droplet me-1"></i>Funktionswiederherstellung
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <div class="bg-light rounded-4 p-5">
+          <h3 class="fw-bold mb-3">Beeindruckt von unseren Ergebnissen?</h3>
+          <p class="text-muted mb-4">Lassen Sie uns auch Ihr Projekt zum Strahlen bringen</p>
+          <a routerLink="/contact" class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-calendar-check me-2"></i>Termin vereinbaren
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

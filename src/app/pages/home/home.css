@@ -1,0 +1,38 @@
+/* Custom styles for home page - Bootstrap handles most styling */
+
+/* Hero section additional animations */
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-media img {
+  animation: fadeInRight 0.8s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom hover effects for service cards */
+.card-hover:hover .bi {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

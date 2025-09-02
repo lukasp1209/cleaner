@@ -1,0 +1,164 @@
+<app-navbar></app-navbar>
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-3">Kontakt</h1>
+        <p class="lead">Schreiben Sie uns für ein unverbindliches Angebot oder rufen Sie direkt an</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section-padding">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-light border-0 p-4">
+            <h3 class="card-title fw-bold mb-0">
+              <i class="bi bi-envelope me-2 text-primary"></i>Nachricht senden
+            </h3>
+          </div>
+          <div class="card-body p-4">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label fw-semibold">Name *</label>
+                  <input 
+                    id="name"
+                    type="text"
+                    formControlName="name" 
+                    placeholder="Vorname Nachname" 
+                    class="form-control"
+                    [class.is-invalid]="f.name.touched && f.name.invalid">
+                  <div class="invalid-feedback" *ngIf="f.name.touched && f.name.invalid">
+                    Bitte Namen eingeben.
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="email" class="form-label fw-semibold">E-Mail *</label>
+                  <input 
+                    id="email"
+                    type="email"
+                    formControlName="email" 
+                    placeholder="name@beispiel.de" 
+                    class="form-control"
+                    [class.is-invalid]="f.email.touched && f.email.invalid">
+                  <div class="invalid-feedback" *ngIf="f.email.touched && f.email.invalid">
+                    Gültige E-Mail erforderlich.
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <label for="phone" class="form-label fw-semibold">Telefon</label>
+                  <input 
+                    id="phone"
+                    type="tel"
+                    formControlName="phone" 
+                    placeholder="+49 123 456789" 
+                    class="form-control">
+                </div>
+                
+                <div class="col-12">
+                  <label for="message" class="form-label fw-semibold">Nachricht *</label>
+                  <textarea
+                    id="message"
+                    formControlName="message"
+                    rows="6"
+                    placeholder="Kurz beschreiben, was gereinigt werden soll..."
+                    class="form-control"
+                    [class.is-invalid]="f.message.touched && f.message.invalid">
+                  </textarea>
+                  <div class="invalid-feedback" *ngIf="f.message.touched && f.message.invalid">
+                    Bitte Nachricht eingeben.
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <button 
+                    type="submit" 
+                    [disabled]="contactForm.invalid"
+                    class="btn btn-primary-custom btn-lg w-100">
+                    <i class="bi bi-send me-2"></i>Nachricht senden
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+            <!-- Success/Error Messages -->
+            <div *ngIf="success" class="alert alert-success mt-3">
+              <i class="bi bi-check-circle me-2"></i>Danke! Wir melden uns in Kürze.
+            </div>
+            <div *ngIf="error" class="alert alert-danger mt-3">
+              <i class="bi bi-exclamation-triangle me-2"></i>Fehler beim Senden. Bitte versuchen Sie es später.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">
+              <i class="bi bi-geo-alt text-primary me-2"></i>Kontaktinformationen
+            </h4>
+            
+            <div class="mb-4">
+              <h6 class="fw-bold mb-2">Adresse</h6>
+              <p class="text-muted mb-0">
+                Musterstraße 123<br>
+                12345 Musterstadt<br>
+                Deutschland
+              </p>
+            </div>
+            
+            <div class="mb-4">
+              <h6 class="fw-bold mb-2">Telefon</h6>
+              <p class="mb-0">
+                <a href="tel:+49123456789" class="text-decoration-none">
+                  <i class="bi bi-telephone text-primary me-2"></i>+49 123 456 7890
+                </a>
+              </p>
+            </div>
+            
+            <div class="mb-4">
+              <h6 class="fw-bold mb-2">E-Mail</h6>
+              <p class="mb-0">
+                <a href="mailto:info@glanzrein.de" class="text-decoration-none">
+                  <i class="bi bi-envelope text-primary me-2"></i>info@glanzrein.de
+                </a>
+              </p>
+            </div>
+            
+            <div class="mb-4">
+              <h6 class="fw-bold mb-2">Öffnungszeiten</h6>
+              <ul class="list-unstyled text-muted small">
+                <li class="mb-1"><strong>Mo-Fr:</strong> 08:00 - 18:00</li>
+                <li class="mb-1"><strong>Sa:</strong> 09:00 - 16:00</li>
+                <li class="mb-1"><strong>So:</strong> Nach Vereinbarung</li>
+              </ul>
+            </div>
+            
+            <div class="bg-light rounded p-3">
+              <h6 class="fw-bold mb-2 text-success">
+                <i class="bi bi-shield-check me-2"></i>Kostenlose Beratung
+              </h6>
+              <small class="text-muted">
+                Wir erstellen Ihnen gerne ein unverbindliches Angebot für Ihr Reinigungsprojekt.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

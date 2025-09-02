@@ -1,0 +1,20 @@
+.site-footer {
+    background: #0f1724;
+    color: #cbd5e1;
+    padding: 16px 0;
+    margin-top: 36px;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    font-size: .9rem;
+}
+
+.site-footer a {
+    color: #9fbce5;
+    text-decoration: none;
+}
